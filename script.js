@@ -56,19 +56,81 @@
 		sections['sectionList'] = arraySections;
 		for(var i = 0; i < amount; i++){
 			arraySections[i].tabIndex = -1;
+			 setPageHeight(arraySections[i].className, 0);
 		}
 		var header = document.getElementsByClassName("header")[0];
 		sections['header'] = header;
+		var sidebar = document.getElementsByClassName('sidebar')[0];
+		 setPageHeight(sidebar.className, 0);
 		// header.className = header.className + " hide";
 	};
 
-	  // var setHeight = function(){
-	  // setPageHeight('entry', 0);
-	  // setPageHeight('projects', 0);
-	  // setPageHeight('aboutme', 0);
-	  // setPageHeight('sidebar', 0);
-	  // };
+	// For resize 
+	var setHeight = function(){
+		for(var i = 0; i < sections['amt']; i++){
+			 setPageHeight(sections['sectionList'][i].className, 0);
+		}
+		var sidebar = document.getElementsByClassName('sidebar')[0];
+		 setPageHeight(sidebar.className, 0);
 
-	  // setHeight();
-	  // setUpSections();
-	  // imageBound('bound', 0, 400);
+
+	};
+
+	var setupUbe = function(){
+	    setUpSections();
+	    imageBound('bound', 0, 400);
+
+   	  var up = document.getElementsByClassName("up")[0];
+   	  var down = document.getElementsByClassName("down")[0];
+
+	  // navigate down if not at last slide
+	  document.getElementsByClassName('down')[0].addEventListener("click", function(){
+	  	if(sections['current'] +1 !== sections['amt']){
+			up.className == "up hide" ? up.className = "up" : up.className = "up";
+	  		var nextSlide = sections['current'] + 1;
+	  		sections['sectionList'][nextSlide].focus();
+	  		sections['current'] += 1;
+	  		if(sections['current']+1 == sections['amt']){
+			down.className = "down" ? down.className = "down hide" : down.className = "down hide";
+
+	  		}
+	  	}
+
+	  });
+	  // navigate up if not first slide
+	  document.getElementsByClassName('up')[0].addEventListener("click", function(){
+	  	if(sections['current']-1 >= 0){
+	  		var nextSlide = sections['current'] - 1;
+	  		sections['sectionList'][nextSlide].focus();
+	  		sections['current'] -= 1;
+	  		down.className = "down hide" ? down.className = "down" : down.className = "down";
+
+	  	} else {
+	  		// sections['header'].className = sections['header'].className + " hide";
+	  		up.className = "up hide";
+	  		window.scrollTo(0,0);
+	  		sections['current'] = 0;
+	  	}
+	  	
+
+	  });
+	  // Side menu
+	  document.getElementsByClassName("btn")[0].addEventListener("click", function(){
+	  	var sidebar = document.getElementsByClassName("sidebar")[0];
+	  	var ulbar = document.getElementsByClassName("ulbar")[0];
+	  	var icon = document.getElementsByClassName("fa")[0];
+
+	  	sidebar.className == "sidebar center shide" ? sidebar.className = "sidebar center" : sidebar.className = "sidebar center shide";
+	  	ulbar.className == "ulbar fhide" ? ulbar.className = "ulbar" : ulbar.className = "ulbar fhide";
+	  	icon.className == "fa fa-bars" ? icon.className = "fa fa-times" : icon.className = "fa fa-bars";
+	  });
+
+	// window.addEventListener("orientationchange", function() {
+	// 	// Announce the new orientation number
+	// 	location.reload();
+	// }, false);
+	window.addEventListener("resize", function(){
+	  setHeight();
+	}, false);
+
+};

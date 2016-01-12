@@ -2,8 +2,81 @@
 <html>
 <head>
 	<title>Ube</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<script src="script.js"></script>
 </head>
 <body>
+<!-- HEADER -->
+  <div class="header">
+    <div class="bold center-center">Header</div>
+    <div class="btn"><i class="fa fa-bars"></i></div>
+  </div>
+
+<div class="sidebar center shide">
+  	<ul class="ulbar fhide">
+  		<li>List Item 1</li>
+  		<li>List Item 2</li>
+  		<li>List Item 3</li>
+  		<li>List Item 4</li>
+  	</ul>
+  </div>
+  
+  <!-- Large Entry -->
+  <div class="List1 section">Main Title
+    <div class="down"><i class="fa fa-angle-double-down"></i></div>
+    <div class="up hide"><i class="fa fa-angle-double-up"></i></div>
+  </div>
+
+  <!-- Projects -->
+  <div class="List2 section">
+  	<div class="slideShow">
+  		Section 2
+  	</div>
+  </div>
+
+    <!-- Projects -->
+  <div class="List3 section">
+  	<div class="slideShow">
+		Section 3
+  	</div>
+  </div>
+
+  <!-- About Me -->
+  <div class="List4 section">
+	 <div class="center">
+	    <img src="sky.jpg" alt="example img" class="dynamicPic bound"/>
+	 </div>
+	 <div class="center">
+		<div class="textfield">Text Field<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+		</div>
+	 </div>
+</div>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function(e){
+	  setupUbe();
+
+	  // setUpSections();
+
+
+
+	  // setHeight();
+	  // imageBound('bound', 0, 400);
+  	  // loadPalette(4);
+	 });
+
+</script>
 
 </body>
 </html>

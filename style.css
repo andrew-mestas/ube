@@ -133,7 +133,7 @@
     z-index: 99;
 	color: #E17F00;
 }
-.portfolioPic{
+.dynamicPic{
 	position: relative;
 	top: 2.6em;
 	-webkit-box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
@@ -193,7 +193,7 @@
 /*SLIDESHOW END*/
 
 @media (min-width: 0px) and (max-width: 800px) and (orientation: portrait){
-.portfolioPic{
+.dynamicPic{
 	position: relative;
 	top: 2.2em;
 	width: 100% !important;
