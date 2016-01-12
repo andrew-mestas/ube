@@ -154,6 +154,9 @@
 .bound{
 
 }
+.table{
+	height: 100%;
+}
 
 .Head, .Row{
 	width: 100%;
@@ -177,6 +180,10 @@
 .Head, .Row{
 	width: 80%;
 	border-bottom: 1px solid black;
+}
+.hasTable{
+	height: 100% !important;
+	
 }
 }
 
