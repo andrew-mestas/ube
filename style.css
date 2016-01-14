@@ -24,7 +24,8 @@
 	-moz-box-shadow: 1px 3px 22px 6px rgba(0,0,0,0.75);
 	box-shadow: 1px 3px 22px 6px rgba(0,0,0,0.75);
 }
-
+.section{
+}
 .hide{
 	display: none;
 }
@@ -79,21 +80,23 @@
 .sidebar li{
 	letter-spacing: 2px;
 	margin-top: 5em;
+}
+.sidebar li:hover{
 
 }
 /*SIDEBAR END*/
 
 /*ENTRY START*/
-/*.entry{
+.entry{
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	font-size: 4em;
-	background: -webkit-gradient(linear, top left, bottom left, from(#000000), to(#FFFFFF));
+/*	background: -webkit-gradient(linear, top left, bottom left, from(#000000), to(#FFFFFF));
     background: -webkit-linear-gradient(#000000, #FFFFFF);
     background: linear-gradient(#000000, #FFFFFF);
-
-}*/
+*/
+}
 /*ENTRY END*/
 
 /*PROJECTS START*/
@@ -156,18 +159,25 @@
 }
 .table{
 	height: 100%;
+	padding-top: 4em;
+	width: 96%;
+	margin-left: 2%;
 }
 
 .Head, .Row{
 	width: 100%;
 	background: grey;
 	border: 1px solid black;
+	text-align: left;
+	font-weight: normal !important;
 }
 .heading, .col{
 	padding: 2%;
 	display: inline-block;
 	width: 20%;
 	border-left: 2px solid black;
+	font-weight: normal !important;
+
 }
 
 @media (min-width: 0px) and (max-width: 800px){
@@ -178,7 +188,6 @@
 
 }
 .Head, .Row{
-	width: 80%;
 	border-bottom: 1px solid black;
 }
 .hasTable{

@@ -29,7 +29,7 @@
 	var setPageHeight = function(className, idx){
 		var height = (window.innerHeight).toString();
 		height += "px";
-		document.getElementsByClassName(className)[idx].style.height = height; 
+		document.getElementsByClassName(className)[idx].style.minHeight = height; 
 		return true;
 	};
 	// To set the width of the entry div for proper centering 
