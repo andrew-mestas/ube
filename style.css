@@ -67,6 +67,7 @@
     position: fixed;
 
 }
+
 .shide{
 	width: 0%;
 	color: rgba(255,255,255, 0);
@@ -117,6 +118,33 @@
 /*ABOUTME END*/
 
 /*MISC*/
+.ubeBread{
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	background: -webkit-gradient(linear, top left, bottom left, from(#A15600), to(#BC8535));
+    background: -webkit-linear-gradient(#A15600, #BC8535);
+    background: linear-gradient(#A15600, #BC8535);
+/*#A15600
+#BC8535*/
+}
+
+.ubeFilling{
+	width: 160px;
+	height: 40px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	background: #391A5C;
+    position: relative;
+    top: 36px;
+    left: 16px;
+}
+ul{
+		list-style-type: none;
+}
 .shrink{
 	-webkit-transition: height 4s;
 	transtion: height 4s;
