@@ -11,6 +11,6 @@ Ube is a responsive design framework that makes it easy to create a layout that 
 * Chat box
 * Autocomplete
 * Paralax
-* Lettering
+* [x] Lettering
 * Cool backgrounds
 * Color Scheme checker
