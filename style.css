@@ -46,6 +46,34 @@
 	top: 0.6em;
 	left: 1.2em;
 }
+.big{
+	font-size: 3em;
+}
+#phrase0{
+	font-size: 3em;
+	color: blue !important;
+}
+#phrase1{
+	color: red;
+	font-size: 2em;
+}
+#phrase2{
+ 	color: green;
+ 	font-size: 2.4em;
+}
+#phrase3{
+	color: yellow;
+	font-size: 2.4em;
+}
+#phrase4{
+	color: purple;
+	font-size: 2.1em;
+}
+#phrase0:hover, #phrase1:hover, #phrase2:hover, #phrase3:hover, #phrase4:hover{ 
+	position: relative;
+	bottom:10px;
+}
+
 /*HEADER END*/
 
 /*SIDEBAR START*/
@@ -182,8 +210,15 @@ ul{
 	font-size: 1.2em;
 	width: 80%;
 }
+.smallPic{
+	width: 300px;
+}
 .bound{
 
+}
+.slide{
+	display: inline-block;
+	margin: 0px;
 }
 .table{
 	height: 100%;
@@ -220,11 +255,18 @@ ul{
 }
 .hasTable{
 	height: 100% !important;
-	
+}
+.border{
+	border-style: none !important;
 }
 }
 
 /*MISC*/
+.border{
+	border: 14px solid;
+    border-color: royalblue;
+    border-style: ridge;
+}
 
 /*SLIDESHOW START*/
 .slideShow{

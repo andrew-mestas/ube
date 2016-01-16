@@ -39,14 +39,49 @@
 		document.getElementsByClassName(className)[idx].style.width = width; 
 		return true;
 	};
-	// Bound the image 
-	var imageBound = function(className, idx, maxwidth){
-		var image = document.getElementsByClassName(className)[idx];
-		var width = window.innerWidth;
-		width = width > maxwidth ? ((width/2 -100)/width)*100 : 100;
-		image.style.width = width + "%";
-		image.style.height = "1%";
 
+	var setAllWidth = function(className){
+		var sections = document.querySelectorAll(className);
+
+		for(var i =0; i< sections.length; i++){
+			var width = (window.innerWidth -40).toString();
+			width += "px";
+
+			sections[i].style.width = width;
+		};
+	};
+	// Bound the image 
+	var imageBound = function(className, maxwidth){
+
+		var images = document.querySelectorAll(className);
+		var length = images.length;
+		
+		for(var i = 0; i< length; i++){
+		var width = window.innerWidth;
+		 width = width > maxwidth ? ((width/2 -100)/width)*100 : 100;
+		 images[i].style.width = width + "%";
+		 images[i].style.height = "1%";
+		}
+
+	};
+
+	var slideShow = function(){
+		var slideshows = document.querySelectorAll(".slideShow");
+		var slides = document.querySelectorAll(".slide");
+		var length = slideshows.length;
+		for(var i = 0; i< length; i++){
+			var child = slideshows[i].children.length;
+			slideshows[i].style.width = (child * 100).toString() + "%";
+		};
+		// horizontal center
+		for(var i= 0; i< slides.length; i++){
+			slides[i].children[0].style.marginLeft = ((parseInt(slides[i].style.width) * .50)- slides[0].children[0].width/2).toString() + "px";
+		}
+
+		// vertical center
+		for(var i= 0; i< slides.length; i++){
+			slides[i].children[0].style.marginTop = ((window.innerHeight * .3)- slides[0].children[0].height/2).toString() + "px";
+		}
 	};
 	// For accessing sections
 	var setUpSections = function(){
@@ -75,12 +110,9 @@
 
 
 	};
-
-	var setupUbe = function(){
-	    setUpSections();
-	    imageBound('bound', 0, 400);
-
-   	  var up = document.getElementsByClassName("up")[0];
+    // Navigation
+    var setNavigation = function(){
+    	 var up = document.getElementsByClassName("up")[0];
    	  var down = document.getElementsByClassName("down")[0];
 
 	  // navigate down if not at last slide
@@ -124,6 +156,31 @@
 	  	ulbar.className == "ulbar fhide" ? ulbar.className = "ulbar" : ulbar.className = "ulbar fhide";
 	  	icon.className == "fa fa-bars" ? icon.className = "fa fa-times" : icon.className = "fa fa-bars";
 	  });
+    };
+
+    var letters = function(){
+    	var idname = document.getElementsByClassName("letters")[0].children[0].className;
+		var phrase = document.getElementsByClassName("letters")[0].children[0].innerHTML;
+		document.getElementsByClassName("letters")[0].children[0].innerHTML = "";
+		var repeat = parseInt(document.getElementsByClassName("letters")[0].dataset.letter);
+		var appendTo = document.getElementsByClassName(idname)[0];
+
+		for(var i =0; i< phrase.length; i++){
+ 			var letterDiv = document.createElement('span');
+ 			letterDiv.id = idname + (i%repeat).toString();
+ 			letterDiv.innerHTML = phrase[i];
+ 			document.getElementsByClassName(idname)[0].appendChild(letterDiv);
+		};
+
+    };
+
+	var setupUbe = function(){
+	    setUpSections();
+   		setAllWidth(".slide");
+	    slideShow();
+	    imageBound('.bound', 400);
+		setNavigation();
+   		letters();
 
 	// window.addEventListener("orientationchange", function() {
 	// 	// Announce the new orientation number
@@ -131,6 +188,8 @@
 	// }, false);
 	window.addEventListener("resize", function(){
 	  setHeight();
+	  slideShow();
+	  setAllWidth(".slide");
 	}, false);
 
 };
