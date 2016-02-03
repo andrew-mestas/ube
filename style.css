@@ -1,0 +1,338 @@
+@import url(https://fonts.googleapis.com/css?family=Average);
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Average', serif;
+}
+
+
+/*HEADER START*/
+
+.header{
+	width: 100%;
+	height: 2.2em;
+	background: black;
+	color: white;
+	position: fixed;
+	top: 0px;
+	z-index: 2;
+/*	background: -webkit-gradient(linear, top left, bottom left, from(darkred), to(firebrick));
+    background: -webkit-linear-gradient(darkred, firebrick);
+    background: linear-gradient(darkred, firebrick);*/
+    background: darkred;
+    -webkit-box-shadow: 1px 3px 22px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 3px 22px 6px rgba(0,0,0,0.75);
+	box-shadow: 1px 3px 22px 6px rgba(0,0,0,0.75);
+}
+.section{
+}
+.hide{
+	display: none;
+}
+.center-center{
+	text-align: center;
+	height: 100%;
+	padding-top: 0.6em;
+}
+
+.bold{
+	font-weight: bold;
+	font-size: 1em;
+}
+.btn{
+	color: white;
+	text-align: left;
+	position: absolute;
+	top: 0.6em;
+	left: 1.2em;
+}
+.big{
+	font-size: 3em;
+}
+#phrase0{
+	font-size: 3em;
+	color: blue !important;
+}
+#phrase1{
+	color: red;
+	font-size: 2em;
+}
+#phrase2{
+ 	color: green;
+ 	font-size: 2.4em;
+}
+#phrase3{
+	color: yellow;
+	font-size: 2.4em;
+}
+#phrase4{
+	color: purple;
+	font-size: 2.1em;
+}
+#phrase0:hover, #phrase1:hover, #phrase2:hover, #phrase3:hover, #phrase4:hover{ 
+	position: relative;
+	bottom:10px;
+}
+
+/*HEADER END*/
+
+/*SIDEBAR START*/
+.sidebar{
+	background: black;
+	color: rgba(255,255,255, 1.0);
+	width: 26%;
+	align-items: center;
+	font-size: 1.3em;
+	-webkit-box-shadow: 15px 5px 42px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 15px 5px 42px -4px rgba(0,0,0,0.75);
+	box-shadow: 15px 5px 42px -4px rgba(0,0,0,0.75);
+	-webkit-transition: width 0.4s, color 4s; /* Safari */
+    transition: width 0.4s, color 4s;
+    timing-function: ease-in;
+    z-index: 1;
+    clear: both;
+    float: left;
+    position: fixed;
+
+}
+
+.shide{
+	width: 0%;
+	color: rgba(255,255,255, 0);
+}
+.fhide{
+	display: none;
+}
+.sidebar ul{
+	list-style-type: none;
+}
+.sidebar li{
+	letter-spacing: 2px;
+	margin-top: 5em;
+}
+.sidebar li:hover{
+
+}
+/*SIDEBAR END*/
+
+/*ENTRY START*/
+.entry{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4em;
+/*	background: -webkit-gradient(linear, top left, bottom left, from(#000000), to(#FFFFFF));
+    background: -webkit-linear-gradient(#000000, #FFFFFF);
+    background: linear-gradient(#000000, #FFFFFF);
+*/
+}
+/*ENTRY END*/
+
+/*PROJECTS START*/
+/*.projects{
+
+	background: -webkit-gradient(linear, top left, bottom left, from(#FFFFFF), to(#000000));
+    background: -webkit-linear-gradient(#FFFFFF, #000000);
+    background: linear-gradient(#FFFFFF, #000000);
+}*/
+/*PROJECTS END*/
+
+/*ABOUTME START*/
+/*.aboutme{
+	background: -webkit-gradient(linear, top left, bottom left, from(#000000), to(#FFFFFF));
+    background: -webkit-linear-gradient(#000000, #FFFFFF);
+    background: linear-gradient(#000000, #FFFFFF);
+}*/
+/*ABOUTME END*/
+
+/*MISC*/
+.ubeBread{
+	width: 200px;
+	height: 100px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	background: -webkit-gradient(linear, top left, bottom left, from(#A15600), to(#BC8535));
+    background: -webkit-linear-gradient(#A15600, #BC8535);
+    background: linear-gradient(#A15600, #BC8535);
+/*#A15600
+#BC8535*/
+}
+
+.ubeFilling{
+	width: 160px;
+	height: 40px;
+	-moz-border-radius: 100px / 50px;
+	-webkit-border-radius: 100px / 50px;
+	border-radius: 100px / 50px;
+	background: #391A5C;
+    position: relative;
+    top: 36px;
+    left: 16px;
+}
+ul{
+		list-style-type: none;
+}
+.shrink{
+	-webkit-transition: height 4s;
+	transtion: height 4s;
+}
+
+.down{
+	position: fixed;
+	bottom: 0px;
+	right: 30px;
+	z-index: 99;
+	color: #E17F00;
+}
+.up{
+	position: fixed;
+    bottom: 60px;
+    right: 30px;
+    z-index: 99;
+	color: #E17F00;
+}
+.dynamicPic{
+	position: relative;
+	top: 2.6em;
+	-webkit-box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
+	box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
+	/*width: 450px;
+	height: 300.375px;*/
+}
+.center{
+	display: flex;
+	justify-content: center;
+}
+.textfield{
+	padding-top: 2.4em;
+	font-size: 1.2em;
+	width: 80%;
+}
+.smallPic{
+	width: 300px;
+}
+.bound{
+
+}
+.slide{
+	display: inline-block;
+	margin: 0px;
+}
+.table{
+	height: 100%;
+	padding-top: 4em;
+	width: 96%;
+	margin-left: 2%;
+}
+
+.Head, .Row{
+	width: 100%;
+	background: grey;
+	border: 1px solid black;
+	text-align: left;
+	font-weight: normal !important;
+}
+.heading, .col{
+	padding: 2%;
+	display: inline-block;
+	width: 20%;
+	border-left: 2px solid black;
+	font-weight: normal !important;
+
+}
+
+@media (min-width: 0px) and (max-width: 800px){
+.heading, .col{
+	display: block;
+	width: 94.9%;
+	border-bottom: 1px solid black;
+
+}
+.Head, .Row{
+	border-bottom: 1px solid black;
+}
+.hasTable{
+	height: 100% !important;
+}
+.border{
+	border-style: none !important;
+}
+}
+
+/*MISC*/
+.border{
+	border: 14px solid;
+    border-color: royalblue;
+    border-style: ridge;
+}
+
+/*SLIDESHOW START*/
+.slideShow{
+	height: 60%;
+	width: 100%;
+	position: relative;
+	top: 2em;
+	/*background: grey;*/
+}
+/*SLIDESHOW END*/
+
+@media (min-width: 0px) and (max-width: 800px) and (orientation: portrait){
+.dynamicPic{
+	position: relative;
+	top: 2.2em;
+	width: 100% !important;
+	height: 66.75% !important;
+}
+.centerImg{
+}
+.sidebar{
+	width: 60%;
+	-webkit-transition: width 0.4s, color 4s; /* Safari */
+    transition: width 0.4s, color 4s;
+    timing-function: ease-in;
+
+}
+
+.shide{
+	width: 0%;
+	color: rgba(255,255,255, 0);
+}
+.sidebar li{
+	letter-spacing: 2px;
+	margin-top: 3.4em;
+
+}
+}
+
+@media (min-width: 600px) and (max-width: 800px) and (orientation: landscape){
+.sidebar li{
+	letter-spacing: 2px;
+	margin-top: 2em;
+
+}
+.shide{
+	width: 0%;
+	color: rgba(255,255,255, 0);
+}
+}
+
+@media (min-width: 0px) and (max-width: 599px) and (orientation: landscape){
+.sidebar li{
+	letter-spacing: 2px;
+	margin-top: 2em;
+
+}
+.sidebar{
+	font-size: 1em;
+	-webkit-transition: width 0.4s, color 4s; /* Safari */
+    transition: width 0.4s, color 4s;
+    timing-function: ease-in;
+
+}
+.shide{
+	width: 0%;
+	color: rgba(255,255,255, 0);
+}
+}
