@@ -159,6 +159,7 @@
 #BC8535*/
 }
 
+
 .ubeFilling{
 	width: 160px;
 	height: 40px;
@@ -172,6 +173,15 @@
 }
 ul{
 		list-style-type: none;
+}
+.blogstyle{
+    color: black;
+    background-color: white;
+    padding: 4%;
+    margin-top: 4%;
+    -webkit-box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
+	-moz-box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
+	box-shadow: 1px 3px 48px 6px rgba(0,0,0,0.75);
 }
 .shrink{
 	-webkit-transition: height 4s;
@@ -286,6 +296,11 @@ ul{
 	height: 66.75% !important;
 }
 .centerImg{
+}
+.blogstyle{
+    padding: 4%;
+    margin-top: 8%;
+    width: 100%;
 }
 .sidebar{
 	width: 60%;
